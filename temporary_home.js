@@ -245,7 +245,7 @@ const Home = ({route,navigation}) => {
       
         <View style={[styles.navigationBar, {zIndex: 3}]}>
           
-          <Pressable style={styles.icons} onPress={navigate_to_home}>
+          <Pressable style={styles.icons}>
             <Image style={styles.icon} source={require("./assets/OnHomeIcon.png")} />
             <Text style={styles.descriptionText}>HOME</Text>
           </Pressable>
