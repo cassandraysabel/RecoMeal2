@@ -5,25 +5,22 @@ import { useNavigation } from '@react-navigation/native';
 export default function FavoritesScreen() {
   const navigation = useNavigation();
 
-  const navigateToHome = () => {
-    navigation.navigate('HomeScreen'); 
+  const navigate_to_calendar = () => {
+    navigation.navigate('temporary_calendar', {text1, displayText, purchaseDate,expirationDate, daysUntilExpiration, markedDates, setMarkedDates,selectedDateIngredients, setSelectedDateIngredients, handleMarkDate})
+  }
+
+  const navigate_to_home = () => {
+    navigation.navigate('temporary_home', {recipes})
+  }
+
+  const navigate_to_ingredient = () => {
+    navigation.navigate("temporary_ingredientscreen", { handleMarkDate });
   };
 
-  const navigateToFavorites = () => {
-    navigation.navigate('HomeScreen'); 
-  };
 
-  const navigateToIngredients = () => {
-    navigation.navigate('IngredientsScreen');
-  };
 
-  const navigateToCalendar = () => {
-    navigation.navigate('CalendarScreen'); 
-  };
 
-  const navigateToProfile = () => {
-    navigation.navigate('ProfileScreen'); 
-  };
+
 
   return (
     <View style={styles.container}>
@@ -46,10 +43,10 @@ export default function FavoritesScreen() {
       {/* NAVIGATION BAR*/}
       <View style={[styles.navigationBar, {zIndex: 3}]}>
         <View style={styles.icons}>
-          <Pressable onPress={navigateToHome}><Image style={styles.icon} source={require("../assets/homeIcon.png")} /></Pressable>
-          <Pressable onPress={navigateToFavorites}><Image style={styles.icon} source={require("../assets/OnFavoritesIcon.png")} /></Pressable>
-          <Pressable onPress={navigateToIngredients}><Image style={styles.icon} source={require("../assets/ingredientsIcon.png")} /></Pressable>
-          <Pressable onPress={navigateToCalendar}><Image style={styles.icon} source={require("../assets/calendarIcon.png")} /></Pressable>
+          <Pressable onPress={navigate_to_home}><Image style={styles.icon} source={require("../assets/homeIcon.png")} /></Pressable>
+          <Pressable><Image style={styles.icon} source={require("../assets/OnFavoritesIcon.png")} /></Pressable>
+          <Pressable onPress={navigate_to_ingredient}><Image style={styles.icon} source={require("../assets/ingredientsIcon.png")} /></Pressable>
+          <Pressable onPress={navigate_to_calendar}><Image style={styles.icon} source={require("../assets/calendarIcon.png")} /></Pressable>
           <Pressable><Image style={styles.icon} source={require("../assets/profileIcon.png")} /></Pressable>
         </View>
         <View style={styles.descriptions}>
