@@ -294,16 +294,23 @@ const styles = StyleSheet.create({
     top: 20
 },
   input: {
-    flex: 1,
-    paddingVertical: 8,
-    fontSize: 16,
-    marginLeft: 15,
-    marginBottom: 10,
+    width: 190,
     height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
+    backgroundColor: "#D9D9D9",
     borderRadius: 10,
-  },
+    marginLeft: 10,
+    top: 0,
+    shadowOpacity: 0.59,
+    shadowRadius: 4.65,
+    elevation: 7
+},
+
+  calendar:{
+    shadowOpacity: 0.59,
+    shadowRadius: 4.65,
+    elevation: 7
+},
+
   searchbar: {
     width: 273,
     height: 40,
