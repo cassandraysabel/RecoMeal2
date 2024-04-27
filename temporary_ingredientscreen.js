@@ -20,6 +20,10 @@ const Ingredient = ({route,navigation}) => {
   const navigate_to_home = () => {
     navigation.navigate('temporary_home', {recipes})
   }
+
+  const navigate_to_favorites = () => {
+    navigation.navigate('FavoritesScreen')
+  }
   
 
   const [markedDates, setMarkedDates] = useState({});
@@ -375,7 +379,7 @@ const Ingredient = ({route,navigation}) => {
           
           <View style={{ width: 8}}/>
           
-          <Pressable style={styles.icons}>
+          <Pressable style={styles.icons} onPress={navigate_to_favorites}>
             <Image style={styles.icon} source={require("./assets/favoritesIcon.png")} />
             <Text style={styles.descriptionText}>FAVORITES</Text>
           </Pressable>

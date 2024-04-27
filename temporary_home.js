@@ -19,6 +19,14 @@ const Home = ({route,navigation}) => {
 
   }
 
+  const navigate_to_favorites = () => {
+    navigation.navigate('FavoritesScreen')
+  }
+
+
+
+  
+
   const navigate_to_ingredient = () => {
     navigation.navigate('temporary_ingredientscreen')
   }
@@ -237,14 +245,14 @@ const Home = ({route,navigation}) => {
       
         <View style={[styles.navigationBar, {zIndex: 3}]}>
           
-          <Pressable style={styles.icons}>
+          <Pressable style={styles.icons} onPress={navigate_to_home}>
             <Image style={styles.icon} source={require("./assets/OnHomeIcon.png")} />
             <Text style={styles.descriptionText}>HOME</Text>
           </Pressable>
           
           <View style={{ width: 8}}/>
           
-          <Pressable style={styles.icons}>
+          <Pressable style={styles.icons} onPress={navigate_to_favorites}>
             <Image style={styles.icon} source={require("./assets/favoritesIcon.png")} />
             <Text style={styles.descriptionText}>FAVORITES</Text>
           </Pressable>
