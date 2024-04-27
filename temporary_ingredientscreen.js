@@ -383,7 +383,7 @@ const Ingredient = ({route,navigation}) => {
           <View style={{ width: 8}}/>
           
           <Pressable style={styles.icons}>
-            <Image style={styles.icon} source={require("./assets/OnIngredientsIcon.png")} />
+            <Image style={styles.icon} source={require("./assets/ingredientsIcon.png")} />
             <Text style={styles.descriptionText}>INGREDIENTS</Text>
           </Pressable>
           

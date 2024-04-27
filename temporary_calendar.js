@@ -208,7 +208,7 @@ const Calendar_Component = ({ route, navigation }) => {
         <Pressable style={styles.icons} onPress={navigate_to_ingredient}>
           <Image
             style={styles.icon}
-            source={require("./assets/OnIngredientsIcon.png")}
+            source={require("./assets/ingredientsIcon.png")}
           />
           <Text style={styles.descriptionText}>INGREDIENTS</Text>
         </Pressable>
@@ -218,7 +218,7 @@ const Calendar_Component = ({ route, navigation }) => {
         <Pressable style={styles.icons}>
           <Image
             style={styles.icon}
-            source={require("./assets/calendarIcon.png")}
+            source={require("./assets/OnCalendarIcon.png")}
           />
           <Text style={styles.descriptionText}>CALENDAR</Text>
         </Pressable>
